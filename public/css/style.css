@@ -1,0 +1,127 @@
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body{
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+    margin:0px;
+    padding:0px;
+}
+h1{
+	font-family: 'Roboto', sans-serif;
+	font-size: 75px;
+	letter-spacing: 10px;
+     word-wrap: break-word;
+     -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+     -ms-hyphens: auto;
+     -o-hyphens: auto;
+     hyphens: auto;
+}
+.box{
+	box-shadow: rgba(114, 182, 234, 0.2) 0 4px 24px;
+	border-radius: 8px;
+	padding: 1em 0.5em;
+}
+.btn{
+	border-radius: 6px;
+}
+.red-button{
+	background-color: #E71D36;
+	border-color: #E71D36;
+}
+.red-button:hover{
+	background-color: #AF1629;
+	border-color: #AF1629;
+}
+.redline{
+	width: 100px;
+	display: block;
+	height: 1px;
+	border:0;
+	border-top: 3px solid #E71D36;
+}
+.section-banner{
+	position: relative;
+	background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+    width:100%; 
+}
+.banner-context{
+	padding: 100px 0px 250px 0px;
+}
+.nav-link:hover {
+	color: #E71D36;
+}
+
+.nav-item.active{
+	font-weight: 600;
+}
+.p-os{
+	font-size: 16px;
+	line-height: 28px;
+}
+.semi-bold{
+	font-weight: 600;
+}
+.navbar-blue{
+	color: #011627;
+}
+.navbar-custom{
+	background-color: #FDFFFC;
+	border-bottom: 1px solid #EFF1F4;
+	font-weight: 400px;
+	font-size: 16px;
+	line-height: 24px;
+}
+.top{
+	padding: 4rem 0;
+}
+.footer{
+	padding-top: 4rem;
+	padding-bottom: 2rem; 
+	color: #FDFFFC;
+	background-color: #1D1D1D;
+}
+.footer-link  > a >p{
+	color: #898989;
+}
+.footer-link  > a >p:hover{
+	color: #FDFFFC;
+}
+.white-text{
+	color: #FFFFFF;
+	text-shadow: 0 1px 3px rgba(0,0,0,.2); 
+}
+.detail-chart{
+	color: #011627;
+}
+.page-link:hover{
+	color: #011627;
+
+}
+a{
+	color: #FDFFFC;
+}
+a:hover{
+	text-decoration: none;
+	color: #E71D36;
+}
+@media (min-width: 992px){
+    .navbar li {
+        margin-left : 2em;
+        margin-right : 2em;
+    }
+}
+@media (max-width: 576px){
+	h1{
+		font-size: 50px;
+	}
+}
