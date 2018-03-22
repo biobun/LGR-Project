@@ -55,7 +55,8 @@
                     </div>
                 </form>
                 <div class="col-12 col-md-12 pt-4 ">
-                    <h6>Description</h6>
+                    <h6 class="semi-bold">Description</h6>
+                    <hr>
                     <p>{!! $product->deskripsi !!}</p>
                 </div>
             </div>

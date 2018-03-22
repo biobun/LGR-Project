@@ -38,11 +38,8 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class=" col-md-6 col-12 my-2">
-                        <button class="btn btn-lg btn-primary btn-block sharp" type="submit" name="submitbutton" value="whatsapp">Pesan via Whatsapp</button>
-                    </div>
-                    <div class="col-md-6 col-12 my-2">
-                        <button class="btn btn-lg btn-warning btn-block sharp" type="submit" name="submitbutton" value="sms">Pesan via SMS</button>
+                    <div class=" col-md-8 col-12 mx-auto">
+                        <button class="btn btn-lg btn-block whatsapp-button semi-bold" type="submit" name="submitbutton" value="whatsapp"><i class="fab fa-whatsapp fa-1x"></i>&nbsp;Pesan via Whatsapp</button>
                     </div>
                 </div>
             </form>

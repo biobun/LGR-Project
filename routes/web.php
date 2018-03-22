@@ -17,17 +17,17 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/facebook', 'SocialAuthFacebookController@redirect');
-Route::get('/facebook/callback', 'SocialAuthFacebookController@callback');
-
-Route::get('/google', 'SocialAuthGoogleController@redirect')->name('google.login');
-Route::get('/google/callback', 'SocialAuthGoogleController@callback');
 
 Route::get('/{social}','SocialAuthController@redirect')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
- 
-Route::get('/{social}/callback','SocialAuthController@callback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
+ Route::get('/{social}/callback','SocialAuthController@callback')->where('social','twitter|facebook|linkedin|google|github|bitbucket');
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::prefix('rg-admin')->group(function(){
+	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
+	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
+	Route::get('/produk','AdminController@produk')->name('admin.produk');
+	Route::get('/', 'AdminController@index')->name('admin.dashboard');
+});
 
 Route::get('/our-story', function() {
 	return view('pages/our-story');
