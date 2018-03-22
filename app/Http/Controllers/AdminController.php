@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
-use Alert;
 
 class AdminController extends Controller
 {
@@ -30,7 +29,25 @@ class AdminController extends Controller
     public function produk()
     {
         $produk = Product::all();
-        Alert::message('Robots are working');
         return view('admin.produk')->with('produk', $produk);
+    }
+    public function insertProduk(Request $request)
+    {
+        Product::create($request->all());
+        return back()->with('message','Data berhasil disimpan');
+    }
+    public function updateProduk(Request $request)
+    {
+        $updateProduk = Product::findOrFail($request->id);
+        $updateProduk->update($request->all());
+
+        return back()->with('message','Data berhasil diubah');
+    }
+    public function deleteProduk(Request $request){
+        $deleteProduk = Product::findOrFail($request->id);
+        $deleteProduk->delete();
+
+        return back()->with('message','Data berhasil dihapus');
+
     }
 }

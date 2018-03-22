@@ -3,6 +3,7 @@
     <head>
         <title>@yield('title')</title>
         <meta name="description" content="@yield('description')">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
         @include('includes.head')
         <!-- CSS  -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet">
@@ -13,7 +14,7 @@
         <script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>   
         <script type="text/javascript" src="{{ URL::asset('js/all.js') }}"></script>   
         <script type="text/javascript" src="{{ URL::asset('js/popper.min.js') }}"></script>   
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        {{-- <script type="text/javascript" src="{{ URL::asset('js/app.js') }}"></script>    --}}
         {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
         {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

@@ -26,6 +26,9 @@ Route::prefix('rg-admin')->group(function(){
 	Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
 	Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
 	Route::get('/produk','AdminController@produk')->name('admin.produk');
+	Route::delete('/produk/deleteproduk', 'AdminController@deleteProduk')->name('admin.deleteproduk');
+	Route::patch('/produk/updateproduk', 'AdminController@updateProduk')->name('admin.updateproduk');
+	Route::post('/produk/insertproduk', 'AdminController@insertProduk')->name('admin.insertproduk');
 	Route::get('/', 'AdminController@index')->name('admin.dashboard');
 });
 
